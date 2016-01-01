@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "chromypack", "chromypack\chromypack.csproj", "{AEE832A2-6D33-4AB5-8CAD-8830B6684E50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "chromypack.Test", "chromypack.Test\chromypack.Test.csproj", "{5CBE8D0F-DEAC-4917-AA73-ADF48564A191}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AEE832A2-6D33-4AB5-8CAD-8830B6684E50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEE832A2-6D33-4AB5-8CAD-8830B6684E50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEE832A2-6D33-4AB5-8CAD-8830B6684E50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEE832A2-6D33-4AB5-8CAD-8830B6684E50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CBE8D0F-DEAC-4917-AA73-ADF48564A191}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CBE8D0F-DEAC-4917-AA73-ADF48564A191}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CBE8D0F-DEAC-4917-AA73-ADF48564A191}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CBE8D0F-DEAC-4917-AA73-ADF48564A191}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
