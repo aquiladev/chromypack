@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+	<metadata>
+		<id>$id$</id>
+		<title>ChromeDriver</title>
+		<version>$version$</version>
+		<authors>Chromium, WebDriver</authors>
+		<owners>aquila</owners>
+		<description>ChromeDriver - WebDriver for Chrome</description>
+		<language>en-US</language>
+		<projectUrl>https://sites.google.com/a/chromium.org/chromedriver</projectUrl>
+		<licenseUrl>http://opensource.org/licenses/BSD-3-Clause</licenseUrl>
+		<iconUrl>http://www.chromium.org/_/rsrc/1438879449147/config/customLogo.gif</iconUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<tags>WebDriver ChromeDriver Chrome Chromium</tags>
+	</metadata>
+	<files>
+		<file src="content\**\*.*" target="content" />
+		<file src="tools\**\*.*" target="tools" />
+	</files>
+</package>

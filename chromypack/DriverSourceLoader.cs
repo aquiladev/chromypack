@@ -3,13 +3,12 @@ using System.Threading.Tasks;
 
 namespace chromypack
 {
-	public class VersionLoader
+	public class DriverSourceLoader : IContentLoader
 	{
-		public Task<byte[]> DownloadAsync(string version)
+		public Task<byte[]> DownloadAsync(string url)
 		{
 			using (var client = new HttpClient())
 			{
-				var url = $"http://chromedriver.storage.googleapis.com/{version}/chromedriver_win32.zip";
 				return client.GetAsync(url)
 					.ContinueWith(request =>
 					{
