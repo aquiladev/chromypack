@@ -19,9 +19,8 @@ namespace chromypack
 			_repository = repository;
 		}
 
-		public DriverPackage Build(string version)
+		public DriverPackage Build(string targetPath, string version)
 		{
-			var targetPath = $@"..\build\{version}";
 			var package = new DriverPackage(targetPath, version);
 
 			_logger.Information($"Build started for {package.Id}.{package.Version} path [{targetPath}]");
@@ -29,8 +28,9 @@ namespace chromypack
 			try
 			{
 				LoadDriver(package);
-				CopyTools(@"template\tools", package);
-				CreateNugetSpec(@"template\package.nuspec", package);
+				CopyToolsFile(@"tools\install.pkg", package, "install.ps1");
+				CopyToolsFile(@"tools\uninstall.pkg", package, "uninstall.ps1");
+				CreateNugetSpec(@"nuspec.pkg", package);
 				Save(package);
 
 				_logger.Information("Build finished");
@@ -71,19 +71,16 @@ namespace chromypack
 			}
 		}
 
-		private void CopyTools(string source, DriverPackage package)
+		private void CopyToolsFile(string source, DriverPackage package, string targetFileName = "")
 		{
-			_logger.Information($"Copying tools directory for {package.Id}.{package.Version}");
+			_logger.Information($"Copying file {source} for {package.Id}.{package.Version}");
 
 			EnsureDirectory(package.ToolsDir);
-			DirectoryInfo dir = new DirectoryInfo(source);
+			FileInfo file = new FileInfo(source);
 
-			FileInfo[] files = dir.GetFiles();
-			foreach (FileInfo file in files)
-			{
-				string temppath = Path.Combine(package.ToolsDir, file.Name);
-				file.CopyTo(temppath, true);
-			}
+			string temppath = Path.Combine(package.ToolsDir,
+				string.IsNullOrEmpty(targetFileName) ? file.Name : targetFileName);
+			file.CopyTo(temppath, true);
 		}
 
 		private void CreateNugetSpec(string source, DriverPackage package)

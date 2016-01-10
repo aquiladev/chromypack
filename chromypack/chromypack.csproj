@@ -61,14 +61,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="chromypack.nuspec" />
+    <Content Include="nuspec.pkg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="packages.config" />
-    <Content Include="template\package.nuspec">
+    <Content Include="tools\install.pkg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="template\tools\install.ps1">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="template\tools\uninstall.ps1">
+    <Content Include="tools\uninstall.pkg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

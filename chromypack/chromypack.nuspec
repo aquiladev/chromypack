@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+	<metadata>
+		<id>$id$</id>
+		<version>$version$</version>
+		<authors>$author$</authors>
+		<owners>$author$</owners>
+		<description>$description$</description>
+		<language>en-US</language>
+		<projectUrl>https://github.com/aquiladev/chromypack</projectUrl>
+		<licenseUrl>https://raw.githubusercontent.com/aquiladev/chromypack/master/LICENSE</licenseUrl>
+		<iconUrl>http://www.chromium.org/_/rsrc/1438879449147/config/customLogo.gif</iconUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<copyright>© 2016 Sergii Bomko</copyright>
+		<tags>packaging NuGet ChromeDriver</tags>
+		<dependencies>
+			<group targetFramework="net452">
+				<dependency id="Microsoft.Web.Xdt" version="2.1.1" />
+				<dependency id="NuGet.Core" version="2.10.1" />
+				<dependency id="System.IO.Compression" version="4.0.0" />
+			</group>
+		</dependencies>
+	</metadata>
+	<files>
+		<file src="tools\install.ps1" target="tools" />
+		<file src="tools\uninstall.ps1" target="tools" />
+	</files>
+</package>

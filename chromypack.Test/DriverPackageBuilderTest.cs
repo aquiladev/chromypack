@@ -18,7 +18,7 @@ namespace chromypack.Test
 		[Fact]
 		public void BuildPackage_BuildsPackagesForOneVersion()
 		{
-			_builder.Build("2.0");
+			_builder.Build(@"..\build\2.0", "2.0");
 		}
 
 		[Fact]
@@ -26,7 +26,7 @@ namespace chromypack.Test
 		{
 			for (var i = 0; i < 21; i++)
 			{
-				_builder.Build($"2.{i}");
+				_builder.Build($@"..\build\2.{i}", $"2.{i}");
 			}
 		}
 	}
