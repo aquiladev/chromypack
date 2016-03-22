@@ -56,7 +56,7 @@
     <Compile Include="DriverPackage.cs" />
     <Compile Include="ILogger.cs" />
     <Compile Include="IRepository.cs" />
-    <Compile Include="Logger .cs" />
+    <Compile Include="Logger.cs" />
     <Compile Include="PackageRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

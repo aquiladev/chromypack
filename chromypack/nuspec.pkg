@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
 	<metadata>
 		<id>$id$</id>
-		<title>ChromeDriver</title>
+		<title>$id$</title>
 		<version>$version$</version>
 		<authors>Chromium, WebDriver</authors>
 		<owners>aquila</owners>
